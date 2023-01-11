@@ -1,12 +1,12 @@
-import { getByTitle } from '@testing-library/react';
+// import { getByTitle } from '@testing-library/react';
 import React from 'react';
 
 import './Preview.css';
 
-export default function Preview({ getByTitle, subtitle, titleFont, align, text }) {
+export default function Preview({ title, subtitle, titleFont, align, text }) {
   return (
     <div className={`preview ${titleFont}`} style={{ textAlign: align }}>
-      <h1>{getByTitle}</h1>
+      <h1>{title}</h1>
       <h3>{subtitle}</h3>
       <p>{text}</p>
     </div>
