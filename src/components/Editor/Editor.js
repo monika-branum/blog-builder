@@ -6,7 +6,8 @@ export default function Editor({ setTitle, setSubtitle, setTitleFont, setAlign, 
   const handleTitle = (e) => setTitle(e.target.value);
   const handleAlign = (e) => setAlign(e.target.value);
   const handleFont = (e) => setTitleFont(e.target.value);
-
+  const handleSubtitle = (e) => setSubtitle(e.target.value);
+  const handleText = (e) => setText(e.target.value);
   return (
     <div className="editor">
       <div className="form-control">
@@ -14,7 +15,7 @@ export default function Editor({ setTitle, setSubtitle, setTitleFont, setAlign, 
         <label htmlFor="title">Title</label>
       </div>
       <div className="form-control">
-        <input type="text" />
+        <input type="text" onChange={handleSubtitle} />
         <label>Subtitle</label>
       </div>
       <div className="form-control">
@@ -48,7 +49,7 @@ export default function Editor({ setTitle, setSubtitle, setTitleFont, setAlign, 
         </div>
       </div>
       <div className="form-control">
-        <textarea style={{ height: '250px' }} />
+        <textarea style={{ height: '250px' }} onChange={handleText} />
         <label>Text</label>
       </div>
     </div>
