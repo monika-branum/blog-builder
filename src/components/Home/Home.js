@@ -19,15 +19,11 @@ export default function Home() {
       <Preview {...{ title, subtitle, titleFont, align, text }} />
       <Editor
         {...{
-          title,
           setTitle,
           titleFont,
           setTitleFont,
-          subtitle,
           setSubtitle,
-          align,
           setAlign,
-          text,
           setText,
         }}
       />

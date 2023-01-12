@@ -5,6 +5,8 @@ import './Editor.css';
 export default function Editor({ setTitle, setSubtitle, setTitleFont, setAlign, setText }) {
   const handleTitle = (e) => setTitle(e.target.value);
   const handleAlign = (e) => setAlign(e.target.value);
+  const handleFont = (e) => setTitleFont(e.target.value);
+
   return (
     <div className="editor">
       <div className="form-control">
@@ -16,7 +18,7 @@ export default function Editor({ setTitle, setSubtitle, setTitleFont, setAlign, 
         <label>Subtitle</label>
       </div>
       <div className="form-control">
-        <select>
+        <select onChange={handleFont}>
           <option value="architect">{"Architect's Daughter"}</option>
           <option value="comforter">Comforter</option>
           <option value="fredoka">Fredoka</option>
